@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Sternberg type of VSTM experiment
+Sternberg type of iconic memory experiment
 - presents letter matrix
 - presents high, middle, or low tone
 - following a variable SOA
