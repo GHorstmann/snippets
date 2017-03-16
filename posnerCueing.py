@@ -52,16 +52,16 @@ for trial in trials:
     win.flip()
     #ms precision not necessary for foreperiod
     core.wait(1)
-    for frame in xrange(200):                  #remainder of trial lasts 200 flips
-        if 0 <=frame < 200:                   #for the first 100 flips only frames
-            drawFrames()                      #call function drawFrames()
-        if 100 <= frame < 102:                #frames 100-102
-            lightFrame(trial['cuePos'])       #call function lightFrame()
-        if 100+trial['soa'] <= frame < 100+trial['soa']+2:#variable soa; note: soa is number of frames
-            target.pos=(trial['tarPos'],0)    #here is the target
+    for screen in xrange(200):                 #remainder of trial lasts 200 flips
+        if 0 <=screen < 200:                   #for the first 100 flips only frames
+            drawFrames()                       #call function drawFrames()
+        if 100 <= screen < 102:                #frames 100-102
+            lightFrame(trial['cuePos'])        #call function lightFrame()
+        if 100+trial['soa'] <= screen < 100+trial['soa']+2:#variable soa; note: soa is number of frames
+            target.pos=(trial['tarPos'],0)     #here is the target
             target.draw()
-        win.flip()                            #drawing finished, now flip
-    if event.getKeys() == 'space':                       #abort when any key is pressed
+        win.flip()                             #drawing finished, now flip
+    if event.getKeys():                        #abort when any key is pressed
         break
 
 event.waitKeys()
