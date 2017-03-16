@@ -95,8 +95,8 @@ for trial in trials:
                     
                     #draw the gap
                     [k,l] = misc.pol2cart(myGapOrientation[i], 8) # x,y position of the gap relative to annulus
-                    myRect.ori=-myGapOrientation[i] # mind the minus - polar coordinates go cc, ori goes clockwise
-                    myRect.pos=(x+k,y+l) #x,y position of the gap relative to screen center
+                    myRect.ori=-myGapOrientation[i] # the tilt of the rectangular gap; mind the minus - polar coordinates go cc, ori goes clockwise
+                    myRect.pos=(x+k,y+l) #x,y position of the gap relative to stimulus center
                     myRect.draw()
                     
                     #draw the target, if at target position and in a target trial
